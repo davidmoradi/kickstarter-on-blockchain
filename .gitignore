@@ -1,5 +1,8 @@
 # dependencies
 /node_modules
 
+# Builds
+/ethereum/build
+
 # misc
 .DS_Store

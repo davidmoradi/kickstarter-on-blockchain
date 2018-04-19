@@ -1,0 +1,18 @@
+{
+  "name": "kickstarter-on-blockchain",
+  "version": "1.0.0",
+  "description": "kickstarter on blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Moradi",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "ganache-cli": "^6.1.0",
+    "mocha": "^5.1.1",
+    "solc": "^0.4.22",
+    "web3": "^1.0.0-beta.33"
+  }
+}

@@ -25,13 +25,40 @@ beforeEach(async () => {
   [campaignAddress] = await factory.methods.getDeployedCampaigns().call()
 
   campaign = await new web3.eth.Contract(JSON.parse(compliedCampaign.interface), campaignAddress);
-
-  console.log(campaign);
-
 });
 
-describe('Crypto', () => {
-  it('Kitties', () => {
-    assert.ok(campaignAddress);
+describe('Campaign', () => {
+  it('it deployes Campaign and CampaignFactory contracts', () => {
+    assert.ok(factory.options.address);
+    assert.ok(campaign.options.address);
+  });
+
+  it('marks caller as the campaign manager', async () => {
+    manager = await campaign.methods.manager().call();
+
+    assert.ok(accounts[0], manager);
+  });
+
+  it('allows people to contribute money and marks them as contributer', async () => {
+    await campaign.methods.contribute().send({
+      from: accounts[1],
+      value: '200'
+    });
+
+    const isContributor = await campaign.methods.contributers(accounts[1]).call();
+
+    assert(isContributor);
+  });
+
+  it('requires a minimum contribution', async () => {
+    try {
+      await campaign.methods.contribute().send({
+        from: accounts[1],
+        value: '10'
+      });
+      assert(false);
+    } catch (error) {
+      assert(error)
+    }
   });
 });

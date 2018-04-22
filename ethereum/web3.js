@@ -1,3 +1,4 @@
+const { INFURA_RINKEBY_URL } = process.env
 import Web3 from 'web3';
 let web3;
 
@@ -12,9 +13,7 @@ if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
   window.web3 = web3;
 } else {
   // We are on the server *OR* User isnt running MetaMask.
-  const provider = new Web3.providers.HttpProvider(
-    '0x6aF5836Ec2dDcd479Ed84839c3CF8D32A9217a11' // TODO: Make this an Enviroment Variable.
-  );
+  const provider = new Web3.providers.HttpProvider(INFURA_RINKEBY_URL);
 
   web3 = new Web3(provider);
 }

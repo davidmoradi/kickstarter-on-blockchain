@@ -1,6 +1,6 @@
 ### Work in progress
 
-This is a clone of kickstarter. (A smarter kickstarter really.)
+This is a clone of KickStarter called KickSmarter (A Smarter KickStarter, really)
 
 Users can create Campaigns and set minimum contribution amount. Once the Campaign is successfully funded by contributors, the raised capital will be locked in the smart contract.
 

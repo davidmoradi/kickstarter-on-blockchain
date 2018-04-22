@@ -3,6 +3,7 @@
 
 # Builds
 /ethereum/build
+.next
 
 # misc
 .DS_Store

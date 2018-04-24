@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
+import { Container } from 'semantic-ui-react'
 
 export default (props) => {
   return (
@@ -11,7 +12,9 @@ export default (props) => {
       </Head>
       <div>
         <Header/>
-        {props.children}
+        <Container>
+          {props.children}
+        </Container>
       </div>
     </div>
   )

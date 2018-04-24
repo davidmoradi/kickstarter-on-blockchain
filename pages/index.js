@@ -27,8 +27,8 @@ class Index extends Component {
       <Layout>
         <div>
           <h3>Live Campaigns</h3>
+          <Button floated='right' content='Create Campaign' icon='add circle' primary/>
           <div>{this.renderCampagins()}</div>
-          <Button content='Create Campaign' icon='add circle' primary/>
         </div>
       </Layout>
     );

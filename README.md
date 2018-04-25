@@ -10,6 +10,6 @@ Contributors then vote on that request, and will essentially have a say in how
 the capital is being used by the campaign creator. As soon as more than 50% of contributors approve the spending request, the campaign creator can finalize request and the requested value would be sent to the recipient.
 
 Contract is deployed to rinkeby network.
-https://rinkeby.etherscan.io/address/0x6aF5836Ec2dDcd479Ed84839c3CF8D32A9217a11
+https://rinkeby.etherscan.io/address/0xeE2fad724a885DC52Bf9a06c5275b596350840Ef
 
 Stay tuned...

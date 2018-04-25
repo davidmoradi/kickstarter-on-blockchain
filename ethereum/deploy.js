@@ -1,8 +1,9 @@
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compliedFactory = require('./build/CampaignFactory.json');
+const { INFURA_RINKEBY_URL } = process.env
 
-const providerURL = "https://rinkeby.infura.io/..."; // replace with your Rinkeby test network URL
+const providerURL = INFURA_RINKEBY_URL; // replace with your Rinkeby test network URL
 const mnemonic = "in crypto we trust ..."; // replace with your 12 word wallet mnemonic.
 
 const provider = new HDWalletProvider(mnemonic, providerURL);

@@ -16,6 +16,13 @@ export default (props) => {
           {props.children}
         </Container>
       </div>
+
+      <style jsx global>{`
+        .container {
+          margin-top: 50px;
+        }
+      `}
+      </style>
     </div>
   )
 }
